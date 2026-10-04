@@ -19,13 +19,17 @@ if not key:
 
 def leitura_documentos(documento):
     paginas = []
-    for doc in documento:
+    for doc, nome_original in documento:
         loader = PyPDFLoader(doc)
-        paginas.extend(loader.load())
+        doc = loader.load()
 
+        for doc in docs:
+            doc.metadata['source'] = nome_original
+
+        paginas.extend(docs)
     chunk = RecursiveCharacterTextSplitter(chunk_size = 500, chunk_overlap = 100, separators = ['\n\n', '\n', ',', '.', ''])
     separado = chunk.split_documents(paginas)
-
+        
     return separado
 
 def banco_vetorial(documento):
