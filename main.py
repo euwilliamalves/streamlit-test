@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-key = os.getenv('OPENAI_KEY')
+key = st.secrets['OPENAI_KEY']
 
 def leitura_documentos(documento):
     paginas = []
