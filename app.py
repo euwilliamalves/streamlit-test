@@ -55,8 +55,8 @@ if documentos:
         arquivos = []
         for documento in documentos:
             arquivo_temp = tempfile.NamedTemporaryFile(delete = False, suffix = '.pdf')
-            arquivo_temp.write(documento.getvalue())
-            arquivos.append(arquivo_temp.name)
+            arquivo_temp.write(documento.getbuffer())
+            arquivos.append((temp.name, documento.name))
 
         doc = leitura_documentos(arquivos)
         banco = banco_vetorial(doc)
