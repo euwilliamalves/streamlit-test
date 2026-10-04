@@ -68,8 +68,8 @@ if documentos:
 # HISTÓRICO DO CHAT
 # =========================
 
-user_avatar = 'C:/Users/William Roberto A/Documents/VsCode/PROJETO/pngtree-users-vector-icon-png-image_3725294.jpg'
-system_avatar = 'C:/Users/William Roberto A/Documents/VsCode/PROJETO/cartoon-robot-avatar-vector-illustration_1277261-2554.avif'
+user_avatar = os.path.join('img','user.jpg')
+system_avatar = os.path.join('img','assistant.avif')
 
 for message in st.session_state.messages:
     if message['role'] == 'user':
