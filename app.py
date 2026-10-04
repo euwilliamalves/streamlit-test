@@ -77,8 +77,8 @@ if documentos:
 # HISTÓRICO DO CHAT
 # =========================
 
-user_avatar = os.path.join('user.jpg')
-system_avatar = os.path.join('cerebro.png')
+user_avatar = os.path.join('👨‍💻')
+system_avatar = os.path.join('🧠')
 
 for message in st.session_state.messages:
     if message['role'] == 'user':
