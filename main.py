@@ -7,7 +7,7 @@ from langchain_community.vectorstores.faiss import FAISS
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 
 from dotenv import load_dotenv
-import strealimt as st
+import streamlit as st
 import os
 
 load_dotenv()
