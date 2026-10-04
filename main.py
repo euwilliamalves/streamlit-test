@@ -21,7 +21,7 @@ def leitura_documentos(documento):
     paginas = []
     for doc, nome_original in documento:
         loader = PyPDFLoader(doc)
-        doc = loader.load()
+        docs = loader.load()
 
         for doc in docs:
             doc.metadata['source'] = nome_original
