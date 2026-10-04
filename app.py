@@ -68,8 +68,8 @@ if documentos:
 # HISTÓRICO DO CHAT
 # =========================
 
-user_avatar = os.path.join('img','user.jpg')
-system_avatar = os.path.join('img','assistant.avif')
+user_avatar = os.path.join('user.jpg')
+system_avatar = os.path.join('assistant.avif')
 
 for message in st.session_state.messages:
     if message['role'] == 'user':
