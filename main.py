@@ -7,10 +7,15 @@ from langchain_community.vectorstores.faiss import FAISS
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 
 from dotenv import load_dotenv
+import strealit as st
 import os
 
 load_dotenv()
-key = st.secrets['OPENAI_KEY']
+
+key = os.getenv('OPENAI_KEY')
+
+if not key:
+    key = st.secrets['OPENAI_KEY']
 
 def leitura_documentos(documento):
     paginas = []
