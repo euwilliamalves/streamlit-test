@@ -64,7 +64,7 @@ def resposta_chat(entrada, banco):
         contexto = ''
 
         for doc in docs:
-            fonte = doc.metadata.get('source', 'Documento desconhecido')
+            fonte = os.path.basename(doc.metadata.get('source', 'Documento desconhecido'))
             pagina = doc.metadata.get('page', 'Página desconhecida')
 
             contexto = contexto + f'Documento: {fonte}\nPágina: {pagina + 1}\nConteúdo: {doc.page_content}'
