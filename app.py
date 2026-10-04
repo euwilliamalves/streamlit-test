@@ -69,7 +69,7 @@ if documentos:
 # =========================
 
 user_avatar = os.path.join('user.jpg')
-system_avatar = os.path.join('i1046861.jpeg')
+system_avatar = os.path.join('images.jpg')
 
 for message in st.session_state.messages:
     if message['role'] == 'user':
