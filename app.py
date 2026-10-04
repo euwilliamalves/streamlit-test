@@ -15,12 +15,15 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-
-.block-container {
-    max-width: 1000px;
-    padding-top: 2rem;
+/* Remove o fundo das mensagens do usuário */
+[data-testid="stChatMessage"] {
+    background-color: transparent !important;
 }
 
+/* Remove o fundo específico do container da mensagem */
+[data-testid="stChatMessageContent"] {
+    background-color: transparent !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
