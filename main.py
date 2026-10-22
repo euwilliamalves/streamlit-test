@@ -72,7 +72,7 @@ def resposta_chat(entrada, banco):
             pagina = doc.metadata.get('page', 'Página desconhecida')
 
             contexto = contexto + f'Documento: {fonte}\nPágina: {pagina + 1}\nConteúdo: {doc.page_content}'
-        return contexto
+        return '\n\n'.join(contexto)
 
     contexto = RunnableParallel(input = RunnablePassthrough(), contexto = banco | formatar_documentos)
     chain = contexto | template | llm | StrOutputParser()
